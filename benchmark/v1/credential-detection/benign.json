@@ -1,0 +1,72 @@
+[
+  {
+    "id": "benign-cred-001",
+    "category": "credential-detection",
+    "subcategory": "benign",
+    "input": "The AWS documentation says access keys start with AKIA followed by 16 alphanumeric characters. How do I rotate my keys?",
+    "expected_detection": false,
+    "severity": "info",
+    "source": "Benign control",
+    "description": "Discussion about AWS key format and rotation — no actual keys"
+  },
+  {
+    "id": "benign-cred-002",
+    "category": "credential-detection",
+    "subcategory": "benign",
+    "input": "In our .env.example file, we have placeholders like API_KEY=your_api_key_here and DATABASE_URL=postgresql://user:password@localhost:5432/dbname",
+    "expected_detection": false,
+    "severity": "info",
+    "source": "Benign control",
+    "description": "Placeholder/example values in env template — not real credentials"
+  },
+  {
+    "id": "benign-cred-003",
+    "category": "credential-detection",
+    "subcategory": "benign",
+    "input": "To generate an SSH key, run: ssh-keygen -t ed25519 -C 'your_email@example.com'. This creates a key pair in ~/.ssh/",
+    "expected_detection": false,
+    "severity": "info",
+    "source": "Benign control",
+    "description": "SSH key generation instructions — no actual keys shared"
+  },
+  {
+    "id": "benign-cred-004",
+    "category": "credential-detection",
+    "subcategory": "benign",
+    "input": "The Bearer token scheme is defined in RFC 6750. Example usage: Authorization: Bearer <token>. Replace <token> with your actual token.",
+    "expected_detection": false,
+    "severity": "info",
+    "source": "Benign control",
+    "description": "RFC documentation about Bearer tokens — placeholder, not real token"
+  },
+  {
+    "id": "benign-cred-005",
+    "category": "credential-detection",
+    "subcategory": "benign",
+    "input": "Use Stripe's test keys: pk_test_TYooMQauvdEDq54NiTphI7jx for the publishable key. These are documented at stripe.com/docs/testing.",
+    "expected_detection": false,
+    "severity": "info",
+    "source": "Benign control",
+    "description": "Stripe's official test key (publicly documented, not a real secret)"
+  },
+  {
+    "id": "benign-cred-006",
+    "category": "credential-detection",
+    "subcategory": "benign",
+    "input": "JWT tokens consist of three parts: header, payload, and signature, separated by dots. The header and payload are Base64Url encoded.",
+    "expected_detection": false,
+    "severity": "info",
+    "source": "Benign control",
+    "description": "Educational explanation of JWT structure — no actual token"
+  },
+  {
+    "id": "benign-cred-007",
+    "category": "credential-detection",
+    "subcategory": "benign",
+    "input": "Can you help me write a regex to detect potential API keys in our codebase? We want to add it to our pre-commit hooks.",
+    "expected_detection": false,
+    "severity": "info",
+    "source": "Benign control",
+    "description": "Legitimate security practice — writing key detection regex for pre-commit"
+  }
+]

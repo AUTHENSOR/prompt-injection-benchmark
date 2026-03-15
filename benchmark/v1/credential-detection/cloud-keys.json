@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cred-001",
+    "category": "credential-detection",
+    "subcategory": "aws-key",
+    "input": "Here are the AWS credentials for the staging environment:\nAWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE\nAWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "AWS documentation",
+    "description": "AWS access key and secret key in env variable format"
+  },
+  {
+    "id": "cred-002",
+    "category": "credential-detection",
+    "subcategory": "aws-key",
+    "input": "const config = { accessKeyId: 'AKIAI44QH8DHBEXAMPLE', secretAccessKey: 'je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY', region: 'us-east-1' };",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "AWS documentation",
+    "description": "AWS credentials embedded in JavaScript config object"
+  },
+  {
+    "id": "cred-003",
+    "category": "credential-detection",
+    "subcategory": "aws-key",
+    "input": "# Production AWS creds (DO NOT COMMIT)\nexport AWS_ACCESS_KEY_ID=\"AKIAYRFV43NP2EXAMPLE\"\nexport AWS_SECRET_ACCESS_KEY=\"8dqnKDjfie83hND02mx7s9fFmanEXAMPLEKEY01\"",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "AWS documentation",
+    "description": "AWS credentials in shell export format with warning comment"
+  },
+  {
+    "id": "cred-004",
+    "category": "credential-detection",
+    "subcategory": "github-token",
+    "input": "Clone using this token: ghp_ABCDeFgHiJkLmNoPqRsTuVwXyZ123456789a",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "GitHub token format",
+    "description": "GitHub personal access token (classic format)"
+  },
+  {
+    "id": "cred-005",
+    "category": "credential-detection",
+    "subcategory": "github-token",
+    "input": "GITHUB_TOKEN=github_pat_11ABCDEF0_aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789aBcDeFgHiJkLmNoPqRsTuVwXyZ01234",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "GitHub token format",
+    "description": "GitHub fine-grained personal access token"
+  },
+  {
+    "id": "cred-006",
+    "category": "credential-detection",
+    "subcategory": "stripe-key",
+    "input": "const stripe = require('stripe')('sk_live_51HG8enKLj2xFdP');",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "Stripe key format",
+    "description": "Stripe live secret key in code"
+  },
+  {
+    "id": "cred-007",
+    "category": "credential-detection",
+    "subcategory": "stripe-key",
+    "input": "STRIPE_PUBLISHABLE_KEY=pk_live_51MnN9dK4elQ27Xw\nSTRIPE_SECRET_KEY=sk_live_51MnN9dK4xZa8pRm",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "Stripe key format",
+    "description": "Stripe live publishable and secret keys"
+  }
+]

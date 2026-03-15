@@ -1,0 +1,39 @@
+{
+  "name": "prompt-injection-benchmark",
+  "version": "1.0.0",
+  "description": "Standardized benchmark for testing AI safety scanners. Run your scanner, get a score.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "pib": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "test": "vitest run",
+    "validate": "node dist/validate.js",
+    "score": "node dist/scoring/score.js"
+  },
+  "keywords": [
+    "ai-safety",
+    "benchmark",
+    "prompt-injection",
+    "security",
+    "scanner",
+    "content-safety"
+  ],
+  "author": "15 Research Lab",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AUTHENSOR/prompt-injection-benchmark.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}

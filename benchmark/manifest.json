@@ -1,0 +1,108 @@
+{
+  "benchmark": "PIB",
+  "version": "v1",
+  "name": "Prompt Injection Benchmark v1",
+  "description": "Standardized benchmark for testing AI safety scanners across 7 threat categories plus benign controls.",
+  "created": "2026-03-14",
+  "author": "15 Research Lab",
+  "license": "MIT",
+  "categories": [
+    {
+      "id": "prompt-injection",
+      "name": "Prompt Injection",
+      "description": "Detection of attempts to override, manipulate, or inject instructions into AI systems.",
+      "subcategories": [
+        "instruction-override",
+        "role-manipulation",
+        "delimiter-injection",
+        "encoding-evasion",
+        "language-switching",
+        "few-shot-poisoning",
+        "context-window-stuffing",
+        "multi-turn-escalation"
+      ]
+    },
+    {
+      "id": "jailbreak",
+      "name": "Jailbreak",
+      "description": "Detection of attempts to bypass AI safety constraints through social engineering or framing.",
+      "subcategories": [
+        "dan-variant",
+        "roleplay",
+        "hypothetical-framing",
+        "academic-framing",
+        "translation-attack",
+        "payload-splitting"
+      ]
+    },
+    {
+      "id": "pii-detection",
+      "name": "PII Detection",
+      "description": "Detection of personally identifiable information in text.",
+      "subcategories": [
+        "email",
+        "phone-number",
+        "ssn",
+        "credit-card",
+        "address",
+        "date-of-birth",
+        "passport-number",
+        "medical-record"
+      ]
+    },
+    {
+      "id": "credential-detection",
+      "name": "Credential Detection",
+      "description": "Detection of API keys, tokens, passwords, and other secrets in text.",
+      "subcategories": [
+        "aws-key",
+        "github-token",
+        "stripe-key",
+        "generic-api-key",
+        "bearer-token",
+        "ssh-key",
+        "database-connection",
+        "jwt-token"
+      ]
+    },
+    {
+      "id": "memory-poisoning",
+      "name": "Memory Poisoning",
+      "description": "Detection of attempts to poison AI memory, RAG systems, or cross-session state.",
+      "subcategories": [
+        "authority-injection",
+        "sleeper-payload",
+        "gradual-drift",
+        "cross-session-contamination",
+        "rag-poisoning"
+      ]
+    },
+    {
+      "id": "code-safety",
+      "name": "Code Safety",
+      "description": "Detection of dangerous code patterns including injection, traversal, and deserialization.",
+      "subcategories": [
+        "command-injection",
+        "sql-injection",
+        "ssrf",
+        "path-traversal",
+        "deserialization",
+        "prototype-pollution"
+      ]
+    },
+    {
+      "id": "exfiltration",
+      "name": "Data Exfiltration",
+      "description": "Detection of attempts to exfiltrate data through various covert channels.",
+      "subcategories": [
+        "dns-exfil",
+        "steganographic",
+        "chunked",
+        "redirect-based",
+        "webhook-based",
+        "email-based"
+      ]
+    }
+  ],
+  "total_cases_target": "250+"
+}

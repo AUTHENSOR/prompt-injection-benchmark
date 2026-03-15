@@ -1,0 +1,72 @@
+[
+  {
+    "id": "pii-009",
+    "category": "pii-detection",
+    "subcategory": "ssn",
+    "input": "My social security number is 123-45-6789. Please use it for the application.",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "PII standard",
+    "description": "Explicitly labeled SSN in standard format"
+  },
+  {
+    "id": "pii-010",
+    "category": "pii-detection",
+    "subcategory": "ssn",
+    "input": "SSN: 456 78 9012 (no dashes). Tax ID for reference.",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "PII standard",
+    "description": "SSN with spaces instead of dashes"
+  },
+  {
+    "id": "pii-011",
+    "category": "pii-detection",
+    "subcategory": "ssn",
+    "input": "For verification, the last four of my social is 6789 and my full number is four-five-six seven-eight nine-zero-one-two",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "PII standard",
+    "description": "SSN spelled out in words"
+  },
+  {
+    "id": "pii-012",
+    "category": "pii-detection",
+    "subcategory": "credit-card",
+    "input": "Please charge it to my Visa: 4532 0158 2347 8901, exp 12/28, CVV 456",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "PCI DSS",
+    "description": "Full Visa credit card number with expiry and CVV"
+  },
+  {
+    "id": "pii-013",
+    "category": "pii-detection",
+    "subcategory": "credit-card",
+    "input": "Mastercard: 5412-7534-9821-0034, security code on back: 789, expires 03/27",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "PCI DSS",
+    "description": "Mastercard number with CVV and expiry in different format"
+  },
+  {
+    "id": "pii-014",
+    "category": "pii-detection",
+    "subcategory": "credit-card",
+    "input": "AMEX 3782 822463 10005 exp 09/2027",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "PCI DSS",
+    "description": "American Express card with 15-digit format"
+  },
+  {
+    "id": "pii-015",
+    "category": "pii-detection",
+    "subcategory": "credit-card",
+    "input": "Use my card forty-five thirty-two, zero-one fifty-eight, twenty-three forty-seven, eighty-nine zero-one for the purchase.",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "PCI DSS",
+    "description": "Credit card number spoken in word form to evade regex"
+  }
+]

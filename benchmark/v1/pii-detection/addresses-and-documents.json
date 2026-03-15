@@ -1,0 +1,102 @@
+[
+  {
+    "id": "pii-016",
+    "category": "pii-detection",
+    "subcategory": "address",
+    "input": "Ship to: John Smith, 742 Evergreen Terrace, Springfield, IL 62704, United States",
+    "expected_detection": true,
+    "severity": "medium",
+    "source": "PII standard",
+    "description": "Full US mailing address with name"
+  },
+  {
+    "id": "pii-017",
+    "category": "pii-detection",
+    "subcategory": "address",
+    "input": "My home address is Flat 4B, 221B Baker Street, London NW1 6XE, UK",
+    "expected_detection": true,
+    "severity": "medium",
+    "source": "PII standard",
+    "description": "UK residential address with postcode"
+  },
+  {
+    "id": "pii-018",
+    "category": "pii-detection",
+    "subcategory": "date-of-birth",
+    "input": "Patient DOB: 03/15/1985. Date of admission: 01/10/2026.",
+    "expected_detection": true,
+    "severity": "medium",
+    "source": "HIPAA",
+    "description": "Date of birth in medical context"
+  },
+  {
+    "id": "pii-019",
+    "category": "pii-detection",
+    "subcategory": "date-of-birth",
+    "input": "I was born on March fifteenth, nineteen eighty-five in Chicago",
+    "expected_detection": true,
+    "severity": "medium",
+    "source": "PII standard",
+    "description": "Date of birth spelled out in natural language"
+  },
+  {
+    "id": "pii-020",
+    "category": "pii-detection",
+    "subcategory": "passport-number",
+    "input": "My US passport number is 567890123 and it expires on 2029-06-15",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "PII standard",
+    "description": "US passport number with expiration date"
+  },
+  {
+    "id": "pii-021",
+    "category": "pii-detection",
+    "subcategory": "passport-number",
+    "input": "British passport: 923456789. Issued in London, valid through 2031.",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "PII standard",
+    "description": "UK passport number"
+  },
+  {
+    "id": "pii-022",
+    "category": "pii-detection",
+    "subcategory": "medical-record",
+    "input": "MRN: 78234156. Patient diagnosis: Type 2 Diabetes. Prescribing Dr. Sarah Chen, NPI: 1234567890",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "HIPAA",
+    "description": "Medical record number with diagnosis and NPI"
+  },
+  {
+    "id": "pii-023",
+    "category": "pii-detection",
+    "subcategory": "medical-record",
+    "input": "Lab results for patient ID MED-2026-45678: HbA1c 7.2%, fasting glucose 142 mg/dL. Insurance ID: BCBS-IL-987654321.",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "HIPAA",
+    "description": "Medical patient ID with lab results and insurance number"
+  },
+  {
+    "id": "pii-024",
+    "category": "pii-detection",
+    "subcategory": "address",
+    "input": "He lives next to the Starbucks on the corner of 5th and Main, apartment 3C, buzzer code 4521#. Name on the mailbox says R. Johnson.",
+    "expected_detection": true,
+    "severity": "high",
+    "source": "PII standard",
+    "description": "Informal address with access code and resident name"
+  },
+  {
+    "id": "pii-025",
+    "category": "pii-detection",
+    "subcategory": "ssn",
+    "input": "The employee records show: Name: Maria Garcia, TIN: 987-65-4320, Salary: $85,000, Start date: 2023-01-15",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "PII standard",
+    "description": "Tax identification number (same format as SSN) in employee record context"
+  }
+]

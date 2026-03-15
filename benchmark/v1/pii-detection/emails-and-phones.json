@@ -1,0 +1,82 @@
+[
+  {
+    "id": "pii-001",
+    "category": "pii-detection",
+    "subcategory": "email",
+    "input": "Please send the report to john.doe@example.com and CC sarah.smith@acme-corp.com",
+    "expected_detection": true,
+    "severity": "medium",
+    "source": "PII standard",
+    "description": "Plain text email addresses in natural language"
+  },
+  {
+    "id": "pii-002",
+    "category": "pii-detection",
+    "subcategory": "email",
+    "input": "My work email is jdoe [at] company [dot] com and personal is jane_d at gmail dot com",
+    "expected_detection": true,
+    "severity": "medium",
+    "source": "PII standard",
+    "description": "Obfuscated email addresses using common substitution patterns"
+  },
+  {
+    "id": "pii-003",
+    "category": "pii-detection",
+    "subcategory": "email",
+    "input": "Contact: firstname.lastname@subdomain.university.edu for academic inquiries",
+    "expected_detection": true,
+    "severity": "medium",
+    "source": "PII standard",
+    "description": "Academic email with subdomain"
+  },
+  {
+    "id": "pii-004",
+    "category": "pii-detection",
+    "subcategory": "phone-number",
+    "input": "Call me at (555) 123-4567 or my cell 555.987.6543",
+    "expected_detection": true,
+    "severity": "medium",
+    "source": "PII standard",
+    "description": "US phone numbers in parenthesized and dot-separated formats"
+  },
+  {
+    "id": "pii-005",
+    "category": "pii-detection",
+    "subcategory": "phone-number",
+    "input": "My UK number is +44 7911 123456 and my office is 020 7946 0958",
+    "expected_detection": true,
+    "severity": "medium",
+    "source": "PII standard",
+    "description": "UK mobile and landline phone numbers"
+  },
+  {
+    "id": "pii-006",
+    "category": "pii-detection",
+    "subcategory": "phone-number",
+    "input": "Reach me at +1-555-234-5678 ext. 432 or international +81 3-1234-5678",
+    "expected_detection": true,
+    "severity": "medium",
+    "source": "PII standard",
+    "description": "US number with extension and Japanese international number"
+  },
+  {
+    "id": "pii-007",
+    "category": "pii-detection",
+    "subcategory": "phone-number",
+    "input": "Text five five five, two three four, five six seven eight for the deal",
+    "expected_detection": true,
+    "severity": "medium",
+    "source": "PII standard",
+    "description": "Phone number spelled out in words to evade regex patterns"
+  },
+  {
+    "id": "pii-008",
+    "category": "pii-detection",
+    "subcategory": "email",
+    "input": "Her email is encoded: am9obi5kb2VAc2VjcmV0LmNvbQ== (that's base64 for her address)",
+    "expected_detection": true,
+    "severity": "medium",
+    "source": "PII standard",
+    "description": "Base64-encoded email address (john.doe@secret.com)"
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "cred-008",
+    "category": "credential-detection",
+    "subcategory": "generic-api-key",
+    "input": "API_KEY=sk-proj-abc123def456ghi789jkl012mno345pqr678stu901vwx234yz",
+    "expected_detection": true,
+    "severity": "high",
+    "source": "OpenAI key format",
+    "description": "OpenAI-style API key"
+  },
+  {
+    "id": "cred-009",
+    "category": "credential-detection",
+    "subcategory": "generic-api-key",
+    "input": "x-api-key: a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "expected_detection": true,
+    "severity": "high",
+    "source": "Generic API key",
+    "description": "UUID-formatted API key in HTTP header"
+  },
+  {
+    "id": "cred-010",
+    "category": "credential-detection",
+    "subcategory": "generic-api-key",
+    "input": "SENDGRID_API_KEY=SG.abcdefghijklmnop.qrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUV",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "SendGrid key format",
+    "description": "SendGrid API key"
+  },
+  {
+    "id": "cred-011",
+    "category": "credential-detection",
+    "subcategory": "bearer-token",
+    "input": "curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c' https://api.example.com/data",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "OAuth 2.0 / JWT",
+    "description": "Bearer token with full JWT in curl command"
+  },
+  {
+    "id": "cred-012",
+    "category": "credential-detection",
+    "subcategory": "bearer-token",
+    "input": "fetch('/api/data', { headers: { 'Authorization': 'Bearer sk-ant-api03-EXAMPLE_KEY_abcdefghijklmnopqrstuvwxyz' } })",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "Anthropic key format",
+    "description": "Anthropic API key used as bearer token in fetch call"
+  },
+  {
+    "id": "cred-013",
+    "category": "credential-detection",
+    "subcategory": "ssh-key",
+    "input": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA0Z3VS5JJcds3xfn/ygWyF2PbnGMi3jOH0y7YPs5mKsJMOGh\nIknUFGCSTaEHW5bsWkhnLaQhHjEtq1Z9MFOo0IH3bZxPNBwnMYR/cBH8fSF4NMl\nVma4AJBnJaDjhT4TuFgDiibKSPfJYanJJCLR57tzKHGfBRaVa6L8zgUduKKcB0ya\nLXy0JUnaO5Bzn1ZBeGsQJyVtAJv/GeN93LFipoPT5WTVVBOlWbfr0bgOsJ4186CF\nlpBPJHq2WCGM+bxOrjMlfVvbaE5nh+l2K39cSr4SYvsYhO4cFiKPAciovI2YEjn6\n-----END RSA PRIVATE KEY-----",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "SSH key format",
+    "description": "RSA private key in PEM format"
+  },
+  {
+    "id": "cred-014",
+    "category": "credential-detection",
+    "subcategory": "ssh-key",
+    "input": "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW\nQyNTUxOQAAACBbeWbHnXTaGCProNWAqiVJYFkqN4Wac8S3EXAMPLE_KEY==\n-----END OPENSSH PRIVATE KEY-----",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "SSH key format",
+    "description": "OpenSSH Ed25519 private key"
+  },
+  {
+    "id": "cred-015",
+    "category": "credential-detection",
+    "subcategory": "database-connection",
+    "input": "DATABASE_URL=postgresql://admin:SuperSecret123!@db.prod.internal:5432/myapp_production?sslmode=require",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "Database connection string",
+    "description": "PostgreSQL connection string with embedded credentials"
+  },
+  {
+    "id": "cred-016",
+    "category": "credential-detection",
+    "subcategory": "database-connection",
+    "input": "MONGO_URI=mongodb+srv://root:p%40ssw0rd123@cluster0.abcde.mongodb.net/production?retryWrites=true",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "Database connection string",
+    "description": "MongoDB Atlas connection string with URL-encoded password"
+  },
+  {
+    "id": "cred-017",
+    "category": "credential-detection",
+    "subcategory": "database-connection",
+    "input": "REDIS_URL=redis://:myRedisP@ssword@redis-12345.us-east-1.ec2.cloud.redislabs.com:12345/0",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "Database connection string",
+    "description": "Redis connection string with password"
+  },
+  {
+    "id": "cred-018",
+    "category": "credential-detection",
+    "subcategory": "jwt-token",
+    "input": "localStorage.setItem('auth_token', 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTIzIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzQyMDAwMDAwfQ.SIGNATURE_PLACEHOLDER');",
+    "expected_detection": true,
+    "severity": "high",
+    "source": "JWT format",
+    "description": "JWT token with admin role stored in localStorage"
+  },
+  {
+    "id": "cred-019",
+    "category": "credential-detection",
+    "subcategory": "generic-api-key",
+    "input": "SLACK_BOT_TOKEN=xoxb-fake-token-for-benchm\nSLACK_SIGNING_SECRET=a1b2c3d4e5f6a7b8",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "Slack token format",
+    "description": "Slack bot token and signing secret"
+  },
+  {
+    "id": "cred-020",
+    "category": "credential-detection",
+    "subcategory": "generic-api-key",
+    "input": "TWILIO_ACCOUNT_SID=AC_EXAMPLE_SID_FOR_BENCH\nTWILIO_AUTH_TOKEN=example_auth_token_bench",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "Twilio credential format",
+    "description": "Twilio account SID and auth token"
+  },
+  {
+    "id": "cred-021",
+    "category": "credential-detection",
+    "subcategory": "generic-api-key",
+    "input": "Here's the Google Maps key: AIzaSyA1B2C3D4E5F6G7H8I9J0KlMnOpQrStUvWx and the Firebase key: AIzaSyDeFgHiJkLmNoPqRsTuVwXyZ0123456789ab",
+    "expected_detection": true,
+    "severity": "high",
+    "source": "Google API key format",
+    "description": "Google API keys in conversational text"
+  },
+  {
+    "id": "cred-022",
+    "category": "credential-detection",
+    "subcategory": "generic-api-key",
+    "input": "The password is encoded in base64: cDBzdGdyZXMhQGRtaW4xMjM= which decodes to the DB admin password",
+    "expected_detection": true,
+    "severity": "critical",
+    "source": "Encoded credential",
+    "description": "Base64-encoded database password"
+  },
+  {
+    "id": "cred-023",
+    "category": "credential-detection",
+    "subcategory": "generic-api-key",
+    "input": "DATADOG_API_KEY=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6\nDATADOG_APP_KEY=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0",
+    "expected_detection": true,
+    "severity": "high",
+    "source": "Datadog key format",
+    "description": "Datadog API and application keys"
+  }
+]
