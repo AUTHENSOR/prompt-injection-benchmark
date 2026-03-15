@@ -152,11 +152,17 @@ Negative cases (benign inputs that look suspicious) are especially valuable.
 
 Benchmark versions are immutable. Once `v1` is released, its test cases never change. New cases go into `v2`. This ensures scores are comparable over time.
 
-## Related Projects
+## Part of the Authensor Ecosystem
 
-- **[Authensor](https://github.com/AUTHENSOR/authensor)** — The open-source safety stack for AI agents. Aegis (Authensor's content safety scanner) is used as the reference implementation for PIB.
-- **[Chainbreaker](https://github.com/AUTHENSOR/chainbreaker)** — Generates adversarial test payloads for AI safety scanners. A good source of new PIB test cases.
-- **[15 Research Lab](https://github.com/AUTHENSOR)** — The research lab behind PIB, Authensor, and Chainbreaker.
+This project is part of the [Authensor](https://github.com/AUTHENSOR/AUTHENSOR) open-source AI safety ecosystem, built by [15 Research Lab](https://github.com/AUTHENSOR).
+
+| Project | Description |
+|---------|-------------|
+| [Authensor](https://github.com/AUTHENSOR/AUTHENSOR) | The open-source safety stack for AI agents |
+| [AI SecLists](https://github.com/AUTHENSOR/ai-seclists) | Security wordlists and payloads for AI/LLM testing |
+| [ATT&CK ↔ Alignment Rosetta](https://github.com/AUTHENSOR/attack-alignment-rosetta) | Maps MITRE ATT&CK to AI alignment concepts |
+| [Agent Forensics](https://github.com/AUTHENSOR/agent-forensics) | Post-incident analysis for receipt chains |
+| [Behavioral Fingerprinting](https://github.com/AUTHENSOR/behavioral-fingerprinting) | Statistical behavioral drift detection |
 
 ## License
 
