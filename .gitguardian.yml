@@ -1,0 +1,7 @@
+# This repository contains intentional test payloads for benchmarking safety scanners.
+# All credentials, tokens, and keys are synthetic and non-functional.
+paths-ignore:
+  - '**/*.txt'
+  - '**/*.ts'
+  - '**/*.json'
+  - 'cases/**'
