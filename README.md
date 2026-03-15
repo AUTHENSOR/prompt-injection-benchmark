@@ -2,7 +2,7 @@
 
 **A standardized benchmark for testing AI safety scanners. Run your scanner. Get a score.**
 
-From [15 Research Lab](https://github.com/15researchlab)
+From [15 Research Lab](https://github.com/15-Research-Lab)
 
 ---
 
@@ -154,7 +154,7 @@ Benchmark versions are immutable. Once `v1` is released, its test cases never ch
 
 ## Part of the Authensor Ecosystem
 
-This project is part of the [Authensor](https://github.com/AUTHENSOR/AUTHENSOR) open-source AI safety ecosystem, built by [15 Research Lab](https://github.com/15researchlab).
+This project is part of the [Authensor](https://github.com/AUTHENSOR/AUTHENSOR) open-source AI safety ecosystem, built by [15 Research Lab](https://github.com/15-Research-Lab).
 
 | Project | Description |
 |---------|-------------|
