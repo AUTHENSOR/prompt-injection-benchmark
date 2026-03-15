@@ -1,5 +1,5 @@
 /**
- * PIB — Runner Interface
+ * PIB -- Runner Interface
  *
  * Implement this interface to benchmark any AI safety scanner against PIB.
  * The interface is deliberately minimal: your scanner takes a string and
@@ -33,7 +33,7 @@ export interface TestCase {
   expected_detection: boolean;
   /** How severe the threat is (only meaningful when expected_detection=true) */
   severity: Severity;
-  /** Attribution — OWASP ref, CVE, research paper, etc. */
+  /** Attribution -- OWASP ref, CVE, research paper, etc. */
   source: string;
   /** Human-readable explanation of what the test case checks */
   description: string;

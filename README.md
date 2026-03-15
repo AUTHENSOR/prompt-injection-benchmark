@@ -8,7 +8,7 @@ From [15 Research Lab](https://github.com/AUTHENSOR)
 
 PIB is an independent, open-source benchmark for measuring how well AI safety scanners detect prompt injections, jailbreaks, PII exposure, credential leaks, memory poisoning, dangerous code patterns, and data exfiltration attempts.
 
-Like GLUE/SuperGLUE for NLP — but for content safety.
+Like GLUE/SuperGLUE for NLP -- but for content safety.
 
 ## Why This Exists
 
@@ -17,10 +17,10 @@ Every AI safety scanner claims to be "comprehensive" and "accurate." But without
 PIB fixes that. It provides:
 
 - **240 test cases** across 7 threat categories + benign controls
-- **Genuine attack payloads** — encoding tricks, multi-language, social engineering, subtle evasion
-- **50+ negative cases** — benign inputs that look suspicious but should NOT trigger detection
+- **Genuine attack payloads** -- encoding tricks, multi-language, social engineering, subtle evasion
+- **50+ negative cases** -- benign inputs that look suspicious but should NOT trigger detection
 - **Precision, recall, and F1 scoring** per category and overall
-- **A pluggable runner** — test any scanner, not just ours
+- **A pluggable runner** -- test any scanner, not just ours
 
 **PIB is not a marketing tool.** It is an independent benchmark. Any scanner can be tested against it. That is what makes it credible.
 
@@ -48,7 +48,7 @@ npx pib run --scanner aegis
 ## Example Output
 
 ```
-  PIB v1 Results — aegis v0.5.0
+  PIB v1 Results -- aegis v0.5.0
   ────────────────────────────────────────────────────────────
 
   Category                   Prec  Recall      F1   Cases
@@ -131,9 +131,9 @@ Each test case is a JSON file:
 
 PIB calculates standard information retrieval metrics:
 
-- **Precision** — Of all inputs flagged, how many were actually threats?
-- **Recall** — Of all actual threats, how many were flagged?
-- **F1 Score** — Harmonic mean of precision and recall
+- **Precision** -- Of all inputs flagged, how many were actually threats?
+- **Recall** -- Of all actual threats, how many were flagged?
+- **F1 Score** -- Harmonic mean of precision and recall
 
 Scores are computed per category and overall. Results are saved as JSON for programmatic consumption.
 

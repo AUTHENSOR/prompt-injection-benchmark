@@ -1,5 +1,5 @@
 /**
- * PIB — Scoring Engine
+ * PIB -- Scoring Engine
  *
  * Calculates precision, recall, and F1 score per category and overall.
  * Reads raw case results and produces the final BenchmarkResult.
@@ -109,7 +109,7 @@ export function formatResultTable(result: BenchmarkResult): string {
   const lines: string[] = [];
 
   lines.push("");
-  lines.push(`  PIB ${result.benchmark_version} Results — ${result.scanner} v${result.scanner_version}`);
+  lines.push(`  PIB ${result.benchmark_version} Results -- ${result.scanner} v${result.scanner_version}`);
   lines.push(`  ${"─".repeat(60)}`);
   lines.push("");
   lines.push(

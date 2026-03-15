@@ -1,5 +1,5 @@
 /**
- * PIB — Prompt Injection Benchmark
+ * PIB -- Prompt Injection Benchmark
  *
  * Public API for programmatic usage.
  */

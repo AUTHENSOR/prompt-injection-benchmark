@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * PIB — CLI
+ * PIB -- CLI
  *
  * Usage:
  *   pib run --scanner aegis           # Run benchmark with Aegis
@@ -105,7 +105,7 @@ async function commandRun(flags: Record<string, string>): Promise<void> {
   const result = await runBenchmark(adapter, version, {
     onProgress(completed, total, caseId) {
       const pct = ((completed / total) * 100).toFixed(0);
-      process.stdout.write(`\r  [${pct}%] ${completed}/${total} — ${caseId}`);
+      process.stdout.write(`\r  [${pct}%] ${completed}/${total} -- ${caseId}`);
     },
   });
 
@@ -128,7 +128,7 @@ async function commandList(): Promise<void> {
     const manifestPath = join(BENCHMARK_ROOT, "..", "benchmark", "manifest.json");
     try {
       const manifest = JSON.parse(await readFile(manifestPath, "utf-8"));
-      console.log(`  ${v.name} — ${manifest.description ?? "No description"}`);
+      console.log(`  ${v.name} -- ${manifest.description ?? "No description"}`);
     } catch {
       console.log(`  ${v.name}`);
     }
@@ -175,7 +175,7 @@ async function commandValidate(): Promise<void> {
 
 function commandHelp(): void {
   console.log(`
-  PIB — Prompt Injection Benchmark
+  PIB -- Prompt Injection Benchmark
   From 15 Research Lab
 
   Usage:

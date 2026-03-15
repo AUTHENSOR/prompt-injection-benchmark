@@ -1,5 +1,5 @@
 /**
- * PIB — Validate test cases
+ * PIB -- Validate test cases
  *
  * Standalone validation script for CI.
  */

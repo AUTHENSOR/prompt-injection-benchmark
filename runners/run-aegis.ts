@@ -1,5 +1,5 @@
 /**
- * PIB — Aegis Runner
+ * PIB -- Aegis Runner
  *
  * Reference scanner adapter for Authensor Aegis.
  * Install Aegis separately: npm install @authensor/aegis
@@ -70,7 +70,7 @@ async function main(): Promise<void> {
   const result = await runBenchmark(adapter, version, {
     onProgress(completed, total, caseId) {
       const pct = ((completed / total) * 100).toFixed(0);
-      process.stdout.write(`\r  [${pct}%] ${completed}/${total} — ${caseId}`);
+      process.stdout.write(`\r  [${pct}%] ${completed}/${total} -- ${caseId}`);
     },
   });
 

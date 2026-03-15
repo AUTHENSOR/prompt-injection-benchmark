@@ -1,5 +1,5 @@
 /**
- * PIB — Benchmark Runner
+ * PIB -- Benchmark Runner
  *
  * Loads all test cases for a benchmark version, runs them through
  * the provided ScannerAdapter, and produces a BenchmarkResult.
